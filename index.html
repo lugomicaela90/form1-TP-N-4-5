@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>form</title>
+    <style>
+      h1 {
+        display: block;
+        text-align: center;
+        font-family: "Fira Sans", sans-serif;
+      }
+      p {
+        display: block;
+        text-align: center;
+        font-family: "Fira Sans", sans-serif;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      form input {
+        display: block;
+        margin: auto;
+        margin-top: 2px;
+      }
+      label {
+        margin-bottom: 10px;
+      }
+      input {
+        width: 150px;
+      }
+      .img-fond {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(https://www.elcolectivo.com.ar/u/fotografias/m/2022/7/4/f768x1-71684_71811_0.jpg);
+        background-size: cover;
+        filter: blur(10px);
+        backdrop-filter: blur(10px);
+        z-index: -1;
+      }
+      .tarjeta {
+        position: absolute;
+        top: 105%;
+      }
+      #tarj1 {
+        left: 35%;
+      }
+      #tarj2 {
+        left: 52%;
+      }
+      .todform {
+        background-color: #ffffff63;
+        border: 1px solid rgba(0, 0, 0, 0.865);
+        color: #0f0f0f;
+        padding: 20px;
+        border-radius: 30px;
+        font-family: "Merriweather", serif;
+      }
+      .enviar {
+        background-color: rgba(255, 255, 255, 0.906);
+        border: 1px solid;
+      }
+      .enviar:hover {
+        transform: scale(0.97);
+      }
+      .enviar:active {
+        transform: scale(0.9);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="img-fond"></div>
+    <div class="todform">
+      <h1>Bienvenido al registro para MILANGAS VIP</h1>
+      <h3>
+        ¡Esta es la página de registro para nuestro sitio VIP de nuestro local
+        de comidas MILANGAS¡<br />vas a encontrar descuentos, cupones y más! Por
+        solo $500
+      </h3>
+      <p>no ponga sus datos reales por favor, esto es falso</p>
+      <div class="form1">
+        <form action="https://formspree.io/f/moqoadbk" method="POST">
+          <label
+            >Nombre:<input
+              type="text"
+              name="nombre"
+              placeholder="Nombre y Apellido"
+              required /></label
+          ><br /><br />
+          <label for="edad">
+            Edad:
+            <input
+              type="text"
+              name="edad"
+              placeholder="Edad"
+              required
+            /><br /><br />
+          </label>
+          <label
+            >Contraseña:<input
+              type="password"
+              name="contraseña"
+              placeholder="Contraseña"
+              required /></label
+          ><br /><br />
+          <label for="sede"
+            >¿Cuál de nuestros locales te queda más cerca?</label
+          >
+          <select name="sede" required>
+            <option value="tig">Tigre</option>
+            <option value="quil">Quilmes</option>
+            <option value="cab">Caballito</option>
+            <option value="pue">Puerto Madero</option></select
+          ><br /><br />
+          <label
+            >Email:<input
+              type="email"
+              name="email"
+              placeholder="Email"
+              required /></label
+          ><br /><br />
+          <label for="celular">Celular:</label>
+          <input
+            type="tel"
+            name="celular"
+            placeholder="Número de celular"
+            pattern="[0-9]{10}"
+            required
+          />
+          <div class="tarjeta" id="tarj1">
+            <label for="nombre">Nombre en la tarjeta:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Nombre de la tarjeta"
+              required
+            />
+
+            <label for="numero">Número de tarjeta:</label>
+            <input
+              type="text"
+              id="numero"
+              name="numero"
+              placeholder="Número de la tarjeta"
+              required
+            />
+          </div>
+          <div class="tarjeta" id="tarj2">
+            <label for="expiracion">Fecha de expiración:</label>
+            <input
+              type="text"
+              id="expiracion"
+              name="expiracion"
+              placeholder="Fecha de expiración"
+              required
+            />
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" placeholder="CVV" required />
+          </div>
+          <br /><br /><br /><br /><br /><br /><br />
+          <input type="submit" class="enviar" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
